@@ -414,7 +414,10 @@
               <e p="TransformInputToWorldSpace.cs" t="Include" />
             </e>
             <e p="LD46" t="Include">
+              <e p="CreateObjectsInGrid.cs" t="Include" />
+              <e p="GetDirectionOfObject.cs" t="Include" />
               <e p="IsGroundColliderColliding.cs" t="Include" />
+              <e p="ShootTowardsObject.cs" t="Include" />
               <e p="SnapToGrid.cs" t="Include" />
             </e>
             <e p="Level" t="Include">
@@ -1123,6 +1126,7 @@
             </e>
           </e>
         </e>
+        <e p="ShotMovement.cs" t="Include" />
       </e>
       <e p="Ludum Dare 46 3D.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

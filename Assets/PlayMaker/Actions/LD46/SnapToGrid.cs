@@ -53,10 +53,8 @@ namespace HutongGames.PlayMaker.Actions
 			var go = Fsm.GetOwnerDefaultTarget(gameObject);
 			if (go == null)
 			{
-				Debug.Log("Cursor is null?");
 				return;
 			}
-			Debug.Log("Snapping");
 
 			Vector3 snappedToGrid =
 				new Vector3(
