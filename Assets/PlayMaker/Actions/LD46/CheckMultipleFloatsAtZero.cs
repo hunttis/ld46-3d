@@ -47,8 +47,6 @@ namespace HutongGames.PlayMaker.Actions
 			bool returnValue = true;
 			foreach (var fsmVar in variables)
 			{
-				Debug.Log("Checking: " + fsmVar.Name + " has value " + fsmVar.Value);
-
 				if (fsmVar.Value > 0)
 				{
 					returnValue = false;
