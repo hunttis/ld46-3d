@@ -8,17 +8,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/IsGroundColliderColliding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/AddForce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/ShootTowardsObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/GetTagCount.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/CollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceToStart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CreateObjectsInGrid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Array/ArrayAddRange.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Math/FloatAdd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CheckMultipleFloatsAtZero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Math/FloatMultiply.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/String/GetStringLeft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Math/SetBoolValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/SnapToGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/CreateEmptyObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/GetDirectionOfObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/String/SetStringValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Transform/SetPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/IsGroundColliderColliding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/CollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Array/ArrayGet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceToStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/String/FormatString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CreateObjectsInGrid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Time/GetTimeInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -34,6 +44,7 @@
         <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/ShootTowardsObject.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/GetTagCount.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpaceToStart.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CheckMultipleFloatsAtZero.cs" />
       </list>
     </option>
   </component>
@@ -69,5 +80,9 @@
       <screen x="1680" y="23" width="2560" height="1338" />
     </state>
     <state x="2887" y="460" key="Rider.ProjectTemplateDialog.Size/0.23.1680.1027/1680.23.2560.1338@1680.23.2560.1338" timestamp="1587201336289" />
+    <state x="2751" y="356" width="747" height="729" key="find.popup" timestamp="1587299388722">
+      <screen x="1680" y="23" width="2560" height="1338" />
+    </state>
+    <state x="2751" y="356" width="747" height="729" key="find.popup/0.23.1680.1027/1680.23.2560.1338@1680.23.2560.1338" timestamp="1587299388722" />
   </component>
 </project>

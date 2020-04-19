@@ -55,8 +55,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 82
-        y: 100
+        x: 116.6875
+        y: 103.30469
         width: 100
         height: 32
       isBreakpoint: 0
@@ -72,88 +72,14 @@ MonoBehaviour:
         linkConstraint: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
-    - name: Running
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 67
-        y: 265
-        width: 187
-        height: 48
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: CREATE_ENEMYSPAWNER
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: CreateEnemySpawner
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: CheckForLevelEnd
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetTimeInfo
-        - HutongGames.PlayMaker.Actions.FloatSubtract
-        - HutongGames.PlayMaker.Actions.FloatCompare
-        - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.SetFloatValue
         customNames:
         - 
-        - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000003000000070000000e000000
-        actionHashCodes: 575875012a6e8a001bcdca0409faa102
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 9845b305
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -170,6 +96,133 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
+          name: LevelEndCooldown
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000000f00000001000000
+        paramName:
+        - floatVariable
+        - floatValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: Running
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 76.75781
+        y: 247.10938
+        width: 187
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CREATE_ENEMYSPAWNER
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: CheckIfShouldCreateSpawner
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: END_LEVEL
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: EndLevel
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetTimeInfo
+        - HutongGames.PlayMaker.Actions.FloatSubtract
+        - HutongGames.PlayMaker.Actions.GetTagCount
+        - HutongGames.PlayMaker.Actions.GetTagCount
+        - HutongGames.PlayMaker.Actions.FloatSubtract
+        - HutongGames.PlayMaker.Actions.FloatCompare
+        - HutongGames.PlayMaker.Actions.FloatAdd
+        - HutongGames.PlayMaker.Actions.ConvertFloatToInt
+        - HutongGames.PlayMaker.Actions.CheckMultipleIntsAtOrBelowZero
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101010101010101
+        actionIsOpen: 01010101010101010101
+        actionStartIndex: 0000000003000000070000000a0000000d00000011000000180000001c0000002000000027000000
+        actionHashCodes: 575875012a6e8a0079de810079de81002a6e8a001bcdca042a6e8a00e4bc690594026c01a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: EnemySpawner
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Enemy
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: LevelEndCooldown
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: deltaTime
           tooltip: 
           showInInspector: 0
@@ -201,24 +254,84 @@ MonoBehaviour:
           value: 0
         - useVariable: 0
           name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: AvailableGreen
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: deltaTime
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: LevelEndCooldown
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         fsmIntParams:
         - useVariable: 1
+          name: EnemySpawnersLeft
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: EnemiesLeft
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: LevelEndInt
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: EnemiesLeft
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: EnemySpawnersLeft
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: LevelEndInt
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: EnemySpawnerCount
           tooltip: 
           showInInspector: 1
           networkSync: 0
           value: 2
-        - useVariable: 0
-          name: 
+        fsmBoolParams:
+        - useVariable: 1
+          name: LevelOver
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams: []
+        - useVariable: 1
+          name: LevelOver
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -228,18 +341,28 @@ MonoBehaviour:
         - 
         - CREATE_ENEMYSPAWNER
         - 
-        - FINISHED
+        - END_LEVEL
         - 
-        - 
-        byteData: 000000000101000100
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 000000000101000101010001010001000000010101
+        arrayParamSizes: 04000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmInt
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 070000000f000000010000000f0000000f00000001000000010000000f0000000f0000000f00000017000000170000001700000001000000100000001000000017000000170000001700000001000000
+        paramDataType: 070000000f000000010000000f0000000f00000001000000010000001200000010000000010000001200000010000000010000000f0000000f00000001000000010000000f0000000f0000000f000000170000001700000017000000010000000f0000000f00000001000000010000000f0000001000000007000000010000000c00000010000000100000001000000010000000010000001100000011000000170000001700000001000000
         paramName:
         - getInfo
         - storeValue
+        - everyFrame
+        - floatVariable
+        - subtract
+        - everyFrame
+        - perSecond
+        - tag
+        - storeResult
+        - everyFrame
+        - tag
+        - storeResult
         - everyFrame
         - floatVariable
         - subtract
@@ -252,21 +375,34 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        - integer1
-        - integer2
-        - equal
-        - lessThan
-        - greaterThan
+        - floatVariable
+        - add
         - everyFrame
-        paramDataPos: 0000000000000000040000000100000002000000050000000600000003000000040000000500000000000000010000000200000007000000000000000100000003000000040000000500000008000000
-        paramByteDataSize: 0400000000000000010000000000000000000000010000000100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        - perSecond
+        - floatVariable
+        - intVariable
+        - rounding
+        - everyFrame
+        - variables
+        - 
+        - 
+        - 
+        - 
+        - everyFrame
+        - storeValue
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 000000000000000004000000010000000200000005000000060000000000000000000000070000000100000001000000080000000300000004000000090000000a0000000500000006000000070000000000000001000000020000000b00000008000000090000000c0000000d0000000a000000020000000e000000120000000000000003000000040000000500000006000000130000000000000001000000030000000400000014000000
+        paramByteDataSize: 04000000000000000100000000000000000000000100000001000000000000000000000001000000000000000000000001000000000000000000000001000000010000000000000000000000000000000000000000000000000000000100000000000000000000000100000001000000000000000000000004000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: GenerateIsland
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 71
-        y: 182
+        x: 109.42969
+        y: 167.85156
         width: 119
         height: 32
       isBreakpoint: 0
@@ -363,8 +499,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 54
-        y: 354
+        x: 83.72656
+        y: 430.77344
         width: 161
         height: 32
       isBreakpoint: 0
@@ -377,21 +513,19 @@ MonoBehaviour:
           isGlobal: 0
         toState: Running
         linkStyle: 0
-        linkConstraint: 0
+        linkConstraint: 2
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.IntOperator
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000008000000
-        actionHashCodes: 9845b305bf83c90014180903
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: bf83c90014180903
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -425,19 +559,7 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 1
-          name: CreateEnemySpawnerCooldown
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: CreateEnemySpawnerRate
-          tooltip: 
-          showInInspector: 1
-          networkSync: 0
-          value: 1
+        fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
           name: EnemySpawnerCount
@@ -476,16 +598,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000100000000
+        byteData: 0100000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000000f0000000100000013000000130000001c0000001c000000130000001000000010000000070000001000000001000000
+        paramDataType: 13000000130000001c0000001c000000130000001000000010000000070000001000000001000000
         paramName:
-        - floatVariable
-        - floatValue
-        - everyFrame
         - gameObject
         - spawnPoint
         - position
@@ -496,132 +615,15 @@ MonoBehaviour:
         - operation
         - storeResult
         - everyFrame
-        paramDataPos: 00000000010000000000000000000000010000000000000001000000020000000000000001000000010000000200000005000000
-        paramByteDataSize: 00000000000000000100000000000000000000000000000000000000000000000000000000000000040000000000000001000000
-    - name: CheckForLevelEnd
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 331
-        y: 286
-        width: 141
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: NO_ENEMIES_LEFT
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: EnsureLevelEnd
-        linkStyle: 0
-        linkConstraint: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.GetTagCount
-        - HutongGames.PlayMaker.Actions.GetTagCount
-        - HutongGames.PlayMaker.Actions.IntCompare
-        customNames:
-        - 
-        - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: 79de810079de810009faa102
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Enemy
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: EnemySpawner
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
-        - useVariable: 1
-          name: EnemiesLeft
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: EnemySpawnersLeft
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: EnemiesLeft
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams: []
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - NO_ENEMIES_LEFT
-        - NO_ENEMIES_LEFT
-        - 
-        byteData: 010101
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 120000001000000001000000120000001000000001000000100000001000000017000000170000001700000001000000
-        paramName:
-        - tag
-        - storeResult
-        - everyFrame
-        - tag
-        - storeResult
-        - everyFrame
-        - integer1
-        - integer2
-        - equal
-        - lessThan
-        - greaterThan
-        - everyFrame
-        paramDataPos: 000000000000000000000000010000000100000001000000020000000300000000000000010000000200000002000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 00000000010000000000000001000000020000000000000001000000000000000200000004000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000040000000000000001000000
     - name: EndLevel
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 336
-        y: 410
+        x: 397.40625
+        y: 337.7578
         width: 100
         height: 32
       isBreakpoint: 0
@@ -632,7 +634,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: ChangeState
+        toState: ChangeScene
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -720,14 +722,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000000000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: ChangeState
+    - name: ChangeScene
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 323
-        y: 485.0078
-        width: 107
+        x: 401.625
+        y: 434.66406
+        width: 111
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -757,7 +759,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 1
           networkSync: 0
-          value: 
+          value: GameWinScreen
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -794,36 +796,46 @@ MonoBehaviour:
         - failedEvent
         paramDataPos: 000000000000000001000000000000000000000001000000
         paramByteDataSize: 000000000100000001000000000000000000000000000000
-    - name: EnsureLevelEnd
+    - name: CheckIfShouldCreateSpawner
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 345
-        y: 350
-        width: 123
-        height: 32
+        x: 62
+        y: 328
+        width: 207
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
+          name: CREATE_ENEMYSPAWNER
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: CreateEnemySpawner
+        linkStyle: 0
+        linkConstraint: 1
+        colorIndex: 0
+      - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: EndLevel
+        toState: Running
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 09faa102
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 9845b30509faa102
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -838,7 +850,19 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: CreateEnemySpawnerCooldown
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: CreateEnemySpawnerRate
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 1
         fsmIntParams:
         - useVariable: 1
           name: EnemySpawnerCount
@@ -860,28 +884,37 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        - 
-        - 
-        byteData: 00
+        - FINISHED
+        - CREATE_ENEMYSPAWNER
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001000000017000000170000001700000001000000
+        paramDataType: 0f0000000f00000001000000100000001000000017000000170000001700000001000000
         paramName:
+        - floatVariable
+        - floatValue
+        - everyFrame
         - integer1
         - integer2
         - equal
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000000000000100000000000000010000000200000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: CHECK_FOR_LEVEL_END
+      isSystemEvent: 0
+      isGlobal: 0
     - name: CREATE_ENEMYSPAWNER
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: END_LEVEL
       isSystemEvent: 0
       isGlobal: 0
     - name: NO_ENEMIES_LEFT
@@ -908,6 +941,30 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: 1
+      - useVariable: 1
+        name: AvailableGreen
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: LevelEndCooldown
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: 
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables:
       - useVariable: 1
         name: EnemySpawnerCount
@@ -927,14 +984,26 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      boolVariables: []
+      - useVariable: 1
+        name: LevelEndInt
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      boolVariables:
+      - useVariable: 1
+        name: LevelOver
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables:
       - useVariable: 1
         name: NextLevelName
         tooltip: 
         showInInspector: 1
         networkSync: 0
-        value: 
+        value: GameWinScreen
       vector2Variables: []
       vector3Variables: []
       colorVariables: []
@@ -948,7 +1017,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -958,7 +1027,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

@@ -412,6 +412,7 @@
               <e p="TransformInputToWorldSpace.cs" t="Include" />
             </e>
             <e p="LD46" t="Include">
+              <e p="CheckMultipleFloatsAtZero.cs" t="Include" />
               <e p="CreateObjectsInGrid.cs" t="Include" />
               <e p="GetDirectionOfObject.cs" t="Include" />
               <e p="IsGroundColliderColliding.cs" t="Include" />
