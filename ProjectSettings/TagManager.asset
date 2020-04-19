@@ -9,6 +9,7 @@ TagManager:
   - IslandPiece
   - SpawnPoints
   - PlayArea
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

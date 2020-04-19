@@ -13,6 +13,9 @@ namespace HutongGames.PlayMaker.Actions
 		[RequiredField]
 		[UIHint(UIHint.Variable)]
 		public FsmInt storeResult;
+
+		[Tooltip("Repeat every frame while the state is active.")]
+		public bool everyFrame;
 		
 		public override void Reset()
 		{
@@ -26,8 +29,25 @@ namespace HutongGames.PlayMaker.Actions
 			
 			if (storeResult != null)
 				storeResult.Value = gos != null ? gos.Length : 0;
-				
-			Finish();
+
+			if (!everyFrame)
+			{
+				Finish();
+			}
+		}
+
+		public override void OnUpdate()
+		{
+			if (!everyFrame)
+			{
+				Finish();
+			}
+			
+			GameObject[] gos = GameObject.FindGameObjectsWithTag(tag.Value);
+			
+			if (storeResult != null)
+				storeResult.Value = gos != null ? gos.Length : 0;
+			
 		}
 	}
 }

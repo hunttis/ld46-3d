@@ -1125,6 +1125,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BackgroundMusicPlayer.cs" t="Include" />
           <e p="CursorMovement.cs" t="Include" />
           <e p="DestroyAfterDelay.cs" t="Include" />
           <e p="ShotMovement.cs" t="Include" />
