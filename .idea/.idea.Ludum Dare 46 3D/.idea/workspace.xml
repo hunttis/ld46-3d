@@ -8,16 +8,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/IsGroundColliderColliding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/AddForce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/ShootTowardsObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/GetTagCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/CollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpaceToStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CreateObjectsInGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/SnapToGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/CreateEmptyObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/GetDirectionOfObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Transform/SetPosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/IsGroundColliderColliding.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Physics/CollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/CreateObjectsInGrid.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -32,6 +33,7 @@
         <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/SnapToGrid.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/LD46/ShootTowardsObject.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/GameObject/GetTagCount.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpaceToStart.cs" />
       </list>
     </option>
   </component>

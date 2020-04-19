@@ -1129,6 +1129,7 @@
           <e p="CursorMovement.cs" t="Include" />
           <e p="DestroyAfterDelay.cs" t="Include" />
           <e p="ShotMovement.cs" t="Include" />
+          <e p="SpaceToStart.cs" t="Include" />
         </e>
       </e>
       <e p="Ludum Dare 46 3D.sln" t="IncludeFlat" />
