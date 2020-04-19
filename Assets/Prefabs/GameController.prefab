@@ -505,17 +505,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: 331
         y: 286
-        width: 139
+        width: 141
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: NO_ENEMIES_LEFT
+          isSystemEvent: 0
           isGlobal: 0
-        toState: EndLevel
+        toState: EnsureLevelEnd
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetTagCount
         - HutongGames.PlayMaker.Actions.GetTagCount
-        - PlayMaker.ConditionalExpression.ConditionalExpression
+        - HutongGames.PlayMaker.Actions.IntCompare
         customNames:
         - 
         - 
@@ -531,7 +531,7 @@ MonoBehaviour:
         actionEnabled: 010101
         actionIsOpen: 010101
         actionStartIndex: 000000000300000006000000
-        actionHashCodes: 79de810079de8100490c8701
+        actionHashCodes: 79de810079de810009faa102
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -554,12 +554,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: EnemySpawner
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: EnemiesLeft == 0 && EnemySpawnersLeft == 0
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -578,27 +572,34 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams:
         - useVariable: 1
+          name: EnemiesLeft
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
+        - NO_ENEMIES_LEFT
+        - NO_ENEMIES_LEFT
         - 
-        byteData: 01010101
+        byteData: 010101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 120000001000000001000000120000001000000001000000120000001700000017000000010000000100000011000000
+        paramDataType: 120000001000000001000000120000001000000001000000100000001000000017000000170000001700000001000000
         paramName:
         - tag
         - storeResult
@@ -606,21 +607,21 @@ MonoBehaviour:
         - tag
         - storeResult
         - everyFrame
-        - expression
-        - isTrueEvent
-        - isFalseEvent
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
         - everyFrame
-        - rawResult
-        - storeResult
-        paramDataPos: 000000000000000000000000010000000100000001000000020000000000000001000000020000000300000000000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000000000000010000000100000000000000
+        paramDataPos: 000000000000000000000000010000000100000001000000020000000300000000000000010000000200000002000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: EndLevel
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 327
-        y: 368
+        x: 336
+        y: 410
         width: 100
         height: 32
       isBreakpoint: 0
@@ -724,8 +725,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 330
-        y: 459
+        x: 323
+        y: 485.0078
         width: 107
         height: 16
       isBreakpoint: 0
@@ -793,11 +794,97 @@ MonoBehaviour:
         - failedEvent
         paramDataPos: 000000000000000001000000000000000000000001000000
         paramByteDataSize: 000000000100000001000000000000000000000000000000
+    - name: EnsureLevelEnd
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 345
+        y: 350
+        width: 123
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: EndLevel
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 09faa102
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: EnemySpawnerCount
+          tooltip: 
+          showInInspector: 1
+          networkSync: 0
+          value: 2
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - 
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000017000000170000001700000001000000
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 000000000100000000000000010000000200000000000000
+        paramByteDataSize: 000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
     - name: CREATE_ENEMYSPAWNER
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NO_ENEMIES_LEFT
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -871,7 +958,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -905,7 +992,7 @@ MonoBehaviour:
     handleAnimatorMove: 0
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
-  eventHandlerComponentsAdded: 0
+  eventHandlerComponentsAdded: 1
 --- !u!1 &1576645142509911567
 GameObject:
   m_ObjectHideFlags: 0
