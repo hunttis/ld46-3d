@@ -18,12 +18,33 @@ public class BackgroundMusicPlayer : MonoBehaviour
     private const int PartCBreaks = 11;
     private const int PartCBlip = 12; // 4x
     private const int PartCBassdrum = 13; // 2x
+    private const int VolumeUp = 14;
+    private const int VolumeDown = 15;
 
     private AudioSource[] Sounds;
     private AudioSource Sync;
     private int Part;
     private int Step;
     private List<List<List<int>>> Sequencer;
+    private const float MaxVolume = 0.5f;
+    private float Volume;
+    private readonly int[] VolumeAudioSources = {
+        Ambience,
+        PartABass,
+        PartAFemaleSinger,
+        PartAMaleSinger,
+        PartBDrums,
+        PartBBass,
+        PartBBlip,
+        PartCDrums,
+        PartCBass,
+        PartCMelody,
+        PartCBreaks,
+        PartCBlip,
+        PartCBassdrum,
+        VolumeUp,
+        VolumeDown
+    };
 
     public int DangerLevel;
 
@@ -75,13 +96,11 @@ public class BackgroundMusicPlayer : MonoBehaviour
             new List<int> { PartCDrums }
         });
 
-        Sequencer.Add(new List<List<int>>
-        {
-            new List<int> { PartCBassdrum }
-        });
-
         // Initially sync to first item, in first part & first sequence
         Sync = Sounds[Sequencer[0][0][0]];
+
+        // Initial volume is half way
+        Volume = 0.25f;
 
         // Start ambience
         PlayAmbience();
@@ -92,6 +111,40 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
     void Update()
     {
+        bool SetVolumeUp = Input.GetKeyUp(KeyCode.Plus) || Input.GetKeyUp(KeyCode.KeypadPlus);
+        bool SetVolumeDown = Input.GetKeyUp(KeyCode.Minus) || Input.GetKeyUp(KeyCode.KeypadMinus);
+        bool VolumeChanged = false;
+
+        if (SetVolumeUp && Volume <= MaxVolume)
+        {
+            Debug.Log("Volume Down");
+            Volume += 0.01f;
+            VolumeChanged = true;
+        }
+        else if (SetVolumeDown && Volume >= 0)
+        {
+            Debug.Log("Volume Up");
+            Volume -= 0.01f;
+            VolumeChanged = true;
+        }
+
+        if (VolumeChanged)
+        {
+            foreach (int VolumeAudioSource in VolumeAudioSources)
+            {
+                Sounds[VolumeAudioSource].volume = Volume;
+            }
+
+            if (SetVolumeUp)
+            {
+                Sounds[VolumeUp].Play();
+            }
+            else if (SetVolumeDown)
+            {
+                Sounds[VolumeDown].Play();
+            }
+        }
+
         PlayAmbience();
         PlayTracks();
     }
@@ -101,10 +154,19 @@ public class BackgroundMusicPlayer : MonoBehaviour
         DangerLevel = dangerLevel;
     }
 
+    public void SetVolume(float volume)
+    {
+        if (volume >= 0 && volume <= 1)
+        {
+            Volume = volume;
+        }
+    }
+
     private void PlayAmbience()
     {
         if (Sounds[Ambience].isPlaying == false && Part != 0)
         {
+            Sounds[Ambience].volume = Volume;
             Sounds[Ambience].Play();
         }
     }
@@ -137,6 +199,7 @@ public class BackgroundMusicPlayer : MonoBehaviour
             // Play all audio sources in part
             foreach (int sound in Sequencer[Part][Step])
             {
+                Sounds[sound].volume = Volume;
                 Sounds[sound].Play();
             }
         }
