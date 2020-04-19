@@ -8,8 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CursorMovement.cs" t="Include" />
-        <e p="DestroyAfterDelay.cs" t="Include" />
         <e p="PlayMaker" t="Include">
           <e p="Actions" t="Include">
             <e p="ActionHelpers.cs" t="Include" />
@@ -1126,7 +1124,11 @@
             </e>
           </e>
         </e>
-        <e p="ShotMovement.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="CursorMovement.cs" t="Include" />
+          <e p="DestroyAfterDelay.cs" t="Include" />
+          <e p="ShotMovement.cs" t="Include" />
+        </e>
       </e>
       <e p="Ludum Dare 46 3D.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
