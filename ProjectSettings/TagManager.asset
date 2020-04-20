@@ -10,6 +10,9 @@ TagManager:
   - SpawnPoints
   - PlayArea
   - EnemySpawner
+  - Controller
+  - Towers
+  - CursorCollider
   layers:
   - Default
   - TransparentFX
@@ -22,8 +25,8 @@ TagManager:
   - CursorPlane
   - Ground
   - Enemy
-  - 
-  - 
+  - Towers
+  - CursorCollider
   - 
   - 
   - 
